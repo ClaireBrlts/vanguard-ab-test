@@ -1,0 +1,2275 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20251.25.0520.1026                               -->
+<workbook original-version='18.1' source-build='2025.1.2 (20251.25.0520.1026)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='IronhackDA2025_VanguardABTestingD' path='/workbooks' revision='1.3' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='error_demographics' inline='true' name='federated.0csvngc1711ko810u15sz11ldnnu' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='error_demographics' name='textscan.1pc2afn0ut3ys21cx2nd20hbyj41'>
+            <connection class='textscan' directory='C:/Users/Santi/Documents/Ironhack/Quests/vanguard-ab-test/Data/Final' filename='error_demographics.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1pc2afn0ut3ys21cx2nd20hbyj41' name='error_demographics.csv' table='[error_demographics#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='es_ES' separator=','>
+            <column datatype='integer' name='client_id' ordinal='0' />
+            <column datatype='string' name='variation' ordinal='1' />
+            <column datatype='string' name='age' ordinal='2' />
+            <column datatype='string' name='gender' ordinal='3' />
+            <column datatype='string' name='generation' ordinal='4' />
+            <column datatype='string' name='visit_id' ordinal='5' />
+            <column datatype='string' name='process_step' ordinal='6' />
+            <column datatype='string' name='step_validation' ordinal='7' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[error_demographics.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;es&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;es_ES&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>client_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[client_id]</local-name>
+            <parent-name>[error_demographics.csv]</parent-name>
+            <remote-alias>client_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[error_demographics.csv_C2ECE73004BC442F8FDBF4919969D87A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>variation</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[variation]</local-name>
+            <parent-name>[error_demographics.csv]</parent-name>
+            <remote-alias>variation</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[error_demographics.csv_C2ECE73004BC442F8FDBF4919969D87A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>age</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[age]</local-name>
+            <parent-name>[error_demographics.csv]</parent-name>
+            <remote-alias>age</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[error_demographics.csv_C2ECE73004BC442F8FDBF4919969D87A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[error_demographics.csv]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[error_demographics.csv_C2ECE73004BC442F8FDBF4919969D87A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>generation</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[generation]</local-name>
+            <parent-name>[error_demographics.csv]</parent-name>
+            <remote-alias>generation</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[error_demographics.csv_C2ECE73004BC442F8FDBF4919969D87A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>visit_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[visit_id]</local-name>
+            <parent-name>[error_demographics.csv]</parent-name>
+            <remote-alias>visit_id</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[error_demographics.csv_C2ECE73004BC442F8FDBF4919969D87A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>process_step</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[process_step]</local-name>
+            <parent-name>[error_demographics.csv]</parent-name>
+            <remote-alias>process_step</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[error_demographics.csv_C2ECE73004BC442F8FDBF4919969D87A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>step_validation</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[step_validation]</local-name>
+            <parent-name>[error_demographics.csv]</parent-name>
+            <remote-alias>step_validation</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[error_demographics.csv_C2ECE73004BC442F8FDBF4919969D87A]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='error_count' datatype='integer' name='[Calculation_1017250586016313345]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD(IF [step_validation] = &apos;error&apos; THEN [visit_id] END)' />
+      </column>
+      <column caption='completion' datatype='integer' name='[Calculation_1017250586016686082]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD(IF [process_step] = &apos;confirm&apos; THEN [visit_id] END)' />
+      </column>
+      <column caption='error_demographics.csv' datatype='table' name='[__tableau_internal_object_id__].[error_demographics.csv_C2ECE73004BC442F8FDBF4919969D87A]' role='measure' type='quantitative' />
+      <column datatype='string' name='[variation]' role='dimension' type='nominal' />
+      <column-instance column='[variation]' derivation='None' name='[none:variation:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='es_ES' class='hyper' dbname='C:/Users/Santi/AppData/Local/Temp/TableauTemp/#TableauTemp_13yorlq1itdbcc1eo3ri81f5i8op.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='06/12/2025 07:55:48 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>client_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[client_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>client_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>error_demographics.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>106229</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>variation</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[variation]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>variation</remote-alias>
+              <ordinal>1</ordinal>
+              <family>error_demographics.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>age</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[age]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>age</remote-alias>
+              <ordinal>2</ordinal>
+              <family>error_demographics.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>305</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gender</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[gender]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gender</remote-alias>
+              <ordinal>3</ordinal>
+              <family>error_demographics.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>generation</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[generation]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>generation</remote-alias>
+              <ordinal>4</ordinal>
+              <family>error_demographics.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>visit_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[visit_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>visit_id</remote-alias>
+              <ordinal>5</ordinal>
+              <family>error_demographics.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>130210</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>process_step</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[process_step]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>process_step</remote-alias>
+              <ordinal>6</ordinal>
+              <family>error_demographics.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>step_validation</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[step_validation]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>step_validation</remote-alias>
+              <ordinal>7</ordinal>
+              <family>error_demographics.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:variation:nk]' type='palette'>
+            <map to='#4b93fb'>
+              <bucket>&quot;Control&quot;</bucket>
+            </map>
+            <map to='#5f72f8'>
+              <bucket>&quot;Test&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;España&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='error_demographics.csv' id='error_demographics.csv_C2ECE73004BC442F8FDBF4919969D87A'>
+            <properties context=''>
+              <relation connection='textscan.1pc2afn0ut3ys21cx2nd20hbyj41' name='error_demographics.csv' table='[error_demographics#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='es_ES' separator=','>
+                  <column datatype='integer' name='client_id' ordinal='0' />
+                  <column datatype='string' name='variation' ordinal='1' />
+                  <column datatype='string' name='age' ordinal='2' />
+                  <column datatype='string' name='gender' ordinal='3' />
+                  <column datatype='string' name='generation' ordinal='4' />
+                  <column datatype='string' name='visit_id' ordinal='5' />
+                  <column datatype='string' name='process_step' ordinal='6' />
+                  <column datatype='string' name='step_validation' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='duration_demographics' inline='true' name='federated.0mjfr131h7jk0l1b2iyry0oc82ow' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='duration_demographics' name='textscan.1u3abbi1cv1fc711rc4pr1kkfokf'>
+            <connection class='textscan' directory='C:/Users/Santi/Documents/Ironhack/Quests/vanguard-ab-test/Data/Final' filename='duration_demographics.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1u3abbi1cv1fc711rc4pr1kkfokf' name='duration_demographics.csv' table='[duration_demographics#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='es_ES' separator=','>
+            <column datatype='integer' name='client_id' ordinal='0' />
+            <column datatype='string' name='variation' ordinal='1' />
+            <column datatype='string' name='age' ordinal='2' />
+            <column datatype='string' name='gender' ordinal='3' />
+            <column datatype='string' name='generation' ordinal='4' />
+            <column datatype='string' name='visit_id' ordinal='5' />
+            <column datatype='string' name='process_step' ordinal='6' />
+            <column datatype='datetime' name='date_time' ordinal='7' />
+            <column datatype='string' name='duration' ordinal='8' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[duration_demographics.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;es&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;es_ES&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>client_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[client_id]</local-name>
+            <parent-name>[duration_demographics.csv]</parent-name>
+            <remote-alias>client_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[duration_demographics.csv_665231B497664A4094299906F78E5A49]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>variation</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[variation]</local-name>
+            <parent-name>[duration_demographics.csv]</parent-name>
+            <remote-alias>variation</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[duration_demographics.csv_665231B497664A4094299906F78E5A49]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>age</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[age]</local-name>
+            <parent-name>[duration_demographics.csv]</parent-name>
+            <remote-alias>age</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[duration_demographics.csv_665231B497664A4094299906F78E5A49]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[duration_demographics.csv]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[duration_demographics.csv_665231B497664A4094299906F78E5A49]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>generation</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[generation]</local-name>
+            <parent-name>[duration_demographics.csv]</parent-name>
+            <remote-alias>generation</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[duration_demographics.csv_665231B497664A4094299906F78E5A49]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>visit_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[visit_id]</local-name>
+            <parent-name>[duration_demographics.csv]</parent-name>
+            <remote-alias>visit_id</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[duration_demographics.csv_665231B497664A4094299906F78E5A49]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>process_step</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[process_step]</local-name>
+            <parent-name>[duration_demographics.csv]</parent-name>
+            <remote-alias>process_step</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[duration_demographics.csv_665231B497664A4094299906F78E5A49]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_time</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[date_time]</local-name>
+            <parent-name>[duration_demographics.csv]</parent-name>
+            <remote-alias>date_time</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[duration_demographics.csv_665231B497664A4094299906F78E5A49]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>duration</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[duration]</local-name>
+            <parent-name>[duration_demographics.csv]</parent-name>
+            <remote-alias>duration</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[duration_demographics.csv_665231B497664A4094299906F78E5A49]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='female_client' datatype='integer' name='[Calculation_1017250586017767427]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD(IF [gender] = &apos;F&apos; THEN [client_id] END)' />
+      </column>
+      <column caption='male_client' datatype='integer' name='[Calculation_1017250586017808388]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD(IF [gender] = &apos;M&apos; THEN [client_id] END)' />
+      </column>
+      <column caption='Zero Axis' datatype='integer' name='[Calculation_1017250586017865733]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='0' />
+      </column>
+      <column caption='duration_demographics.csv' datatype='table' name='[__tableau_internal_object_id__].[duration_demographics.csv_665231B497664A4094299906F78E5A49]' role='measure' type='quantitative' />
+      <column aggregation='None' caption='age (agrupación)' datatype='integer' name='[age (agrupación)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='0' formula='[age]' peg='0' size='5' />
+      </column>
+      <column datatype='real' datatype-customized='true' name='[age]' role='dimension' type='ordinal' />
+      <column datatype='real' datatype-customized='true' name='[duration]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[gender]' role='dimension' type='nominal' />
+      <column datatype='string' name='[variation]' role='dimension' type='nominal' />
+      <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+      <column-instance column='[variation]' derivation='None' name='[none:variation:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_1017250586017865733]' derivation='Sum' name='[sum:Calculation_1017250586017865733:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_1017250586017767427]' derivation='User' name='[usr:Calculation_1017250586017767427:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_1017250586017808388]' derivation='User' name='[usr:Calculation_1017250586017808388:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='es_ES' class='hyper' dbname='C:/Users/Santi/AppData/Local/Temp/TableauTemp/#TableauTemp_0ternwx0jhwvqu17hoakj026ztq1.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='06/12/2025 07:55:13 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>client_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[client_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>client_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>duration_demographics.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>102628</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[duration_demographics.csv_665231B497664A4094299906F78E5A49]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>variation</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[variation]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>variation</remote-alias>
+              <ordinal>1</ordinal>
+              <family>duration_demographics.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <object-id>[duration_demographics.csv_665231B497664A4094299906F78E5A49]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>age</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[age]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>age</remote-alias>
+              <ordinal>2</ordinal>
+              <family>duration_demographics.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>244</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <object-id>[duration_demographics.csv_665231B497664A4094299906F78E5A49]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gender</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[gender]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gender</remote-alias>
+              <ordinal>3</ordinal>
+              <family>duration_demographics.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <object-id>[duration_demographics.csv_665231B497664A4094299906F78E5A49]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>generation</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[generation]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>generation</remote-alias>
+              <ordinal>4</ordinal>
+              <family>duration_demographics.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <object-id>[duration_demographics.csv_665231B497664A4094299906F78E5A49]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>visit_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[visit_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>visit_id</remote-alias>
+              <ordinal>5</ordinal>
+              <family>duration_demographics.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>119197</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <object-id>[duration_demographics.csv_665231B497664A4094299906F78E5A49]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>process_step</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[process_step]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>process_step</remote-alias>
+              <ordinal>6</ordinal>
+              <family>duration_demographics.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <object-id>[duration_demographics.csv_665231B497664A4094299906F78E5A49]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>date_time</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[date_time]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>date_time</remote-alias>
+              <ordinal>7</ordinal>
+              <family>duration_demographics.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>288878</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[duration_demographics.csv_665231B497664A4094299906F78E5A49]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>duration</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[duration]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>duration</remote-alias>
+              <ordinal>8</ordinal>
+              <family>duration_demographics.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1712</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <object-id>[duration_demographics.csv_665231B497664A4094299906F78E5A49]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:variation:nk]' type='palette'>
+            <map to='#4b93fb'>
+              <bucket>&quot;Control&quot;</bucket>
+            </map>
+            <map to='#5f72f8'>
+              <bucket>&quot;Test&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[sum:Calculation_1017250586017865733:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[usr:Calculation_1017250586017808388:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[usr:Calculation_1017250586017767427:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:gender:nk]' type='palette'>
+            <map to='#2ec5ff'>
+              <bucket>&quot;M&quot;</bucket>
+            </map>
+            <map to='#9bbcff'>
+              <bucket>&quot;F&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;España&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='duration_demographics.csv' id='duration_demographics.csv_665231B497664A4094299906F78E5A49'>
+            <properties context=''>
+              <relation connection='textscan.1u3abbi1cv1fc711rc4pr1kkfokf' name='duration_demographics.csv' table='[duration_demographics#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='es_ES' separator=','>
+                  <column datatype='integer' name='client_id' ordinal='0' />
+                  <column datatype='string' name='variation' ordinal='1' />
+                  <column datatype='string' name='age' ordinal='2' />
+                  <column datatype='string' name='gender' ordinal='3' />
+                  <column datatype='string' name='generation' ordinal='4' />
+                  <column datatype='string' name='visit_id' ordinal='5' />
+                  <column datatype='string' name='process_step' ordinal='6' />
+                  <column datatype='datetime' name='date_time' ordinal='7' />
+                  <column datatype='string' name='duration' ordinal='8' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Filtro 1 (generado)' name='[Action1_15AE7427CF7D4A4B8A65FE998CA20B7A]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='gen_dist' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='age_dist'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='duration_demographics' name='federated.0mjfr131h7jk0l1b2iyry0oc82ow' />
+            <datasource caption='error_demographics' name='federated.0csvngc1711ko810u15sz11ldnnu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0csvngc1711ko810u15sz11ldnnu'>
+            <column datatype='string' name='[gender]' role='dimension' type='nominal' />
+            <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[process_step]' derivation='None' name='[none:process_step:nk]' pivot='key' type='nominal' />
+            <column-instance column='[variation]' derivation='None' name='[none:variation:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[process_step]' role='dimension' type='nominal' />
+            <column datatype='string' name='[variation]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0mjfr131h7jk0l1b2iyry0oc82ow'>
+            <column caption='female_client' datatype='integer' name='[Calculation_1017250586017767427]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD(IF [gender] = &apos;F&apos; THEN [client_id] END)' />
+            </column>
+            <column caption='male_client' datatype='integer' name='[Calculation_1017250586017808388]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD(IF [gender] = &apos;M&apos; THEN [client_id] END)' />
+            </column>
+            <column caption='Zero Axis' datatype='integer' name='[Calculation_1017250586017865733]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='0' />
+            </column>
+            <column aggregation='None' caption='age (agrupación)' datatype='integer' name='[age (agrupación)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[age]' peg='0' size='5' />
+            </column>
+            <column datatype='real' datatype-customized='true' name='[age]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[client_id]' role='measure' type='quantitative' />
+            <column datatype='string' name='[gender]' role='dimension' type='nominal' />
+            <column-instance column='[age (agrupación)]' derivation='None' name='[none:age (agrupación):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[process_step]' derivation='None' name='[none:process_step:nk]' pivot='key' type='nominal' />
+            <column-instance column='[variation]' derivation='None' name='[none:variation:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[process_step]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1017250586017865733]' derivation='Sum' name='[sum:Calculation_1017250586017865733:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1017250586017767427]' derivation='User' name='[usr:Calculation_1017250586017767427:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1017250586017808388]' derivation='User' name='[usr:Calculation_1017250586017808388:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[variation]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0csvngc1711ko810u15sz11ldnnu].[none:gender:nk]' filter-group='3'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:gender:nk]' member='&quot;F&quot;' />
+              <groupfilter function='member' level='[none:gender:nk]' member='&quot;M&quot;' />
+            </groupfilter>
+            <target field='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:gender:nk]' />
+          </filter>
+          <filter class='categorical' column='[federated.0csvngc1711ko810u15sz11ldnnu].[none:process_step:nk]' filter-group='5'>
+            <groupfilter function='level-members' level='[none:process_step:nk]' />
+            <target field='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:process_step:nk]' />
+          </filter>
+          <filter class='categorical' column='[federated.0csvngc1711ko810u15sz11ldnnu].[none:variation:nk]' filter-group='4'>
+            <groupfilter function='level-members' level='[none:variation:nk]' />
+            <target field='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:variation:nk]' />
+          </filter>
+          <slices>
+            <column>[federated.0csvngc1711ko810u15sz11ldnnu].[none:gender:nk]</column>
+            <column>[federated.0csvngc1711ko810u15sz11ldnnu].[none:variation:nk]</column>
+            <column>[federated.0csvngc1711ko810u15sz11ldnnu].[none:process_step:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[usr:Calculation_1017250586017767427:qk]' field-type='quantitative' max='2254' min='0' range-type='fixed' reverse='true' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[sum:Calculation_1017250586017865733:qk]' field-type='quantitative' fold='true' max='0' min='0' range-type='fixed' scope='cols' synchronized='true' type='space' />
+            <encoding attr='space' class='0' field='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[usr:Calculation_1017250586017808388:qk]' field-type='quantitative' max='2156' min='-10' range-type='fixed' scope='cols' type='space' />
+            <format attr='display' class='0' field='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[sum:Calculation_1017250586017865733:qk]' scope='cols' value='false' />
+            <format attr='display' class='0' field='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[usr:Calculation_1017250586017767427:qk]' scope='cols' value='false' />
+            <format attr='display' class='0' field='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[usr:Calculation_1017250586017808388:qk]' scope='cols' value='false' />
+            <format attr='tick-color' scope='rows' value='#00000000' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:age (agrupación):ok]' value='26' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' scope='rows' value='0' />
+            <format attr='border-style' data-class='total' scope='rows' value='none' />
+            <format attr='border-width' data-class='total' scope='cols' value='0' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:age (agrupación):ok]' value='false' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' scope='rows' value='0' />
+            <format attr='border-style' data-class='total' scope='rows' value='none' />
+            <format attr='border-width' data-class='total' scope='cols' value='0' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[usr:Calculation_1017250586017767427:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:gender:nk]' />
+              <text column='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:age (agrupación):ok]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='left' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[sum:Calculation_1017250586017865733:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[usr:Calculation_1017250586017808388:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:gender:nk]' />
+              <text column='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:age (agrupación):ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:age (agrupación):ok]</rows>
+        <cols>([federated.0mjfr131h7jk0l1b2iyry0oc82ow].[usr:Calculation_1017250586017767427:qk] + ([federated.0mjfr131h7jk0l1b2iyry0oc82ow].[sum:Calculation_1017250586017865733:qk] + [federated.0mjfr131h7jk0l1b2iyry0oc82ow].[usr:Calculation_1017250586017808388:qk]))</cols>
+        <show-full-range>
+          <column>[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[age (agrupación)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{D38CB3ED-3A9A-473A-A46D-C6C66E7A442D}' />
+    </worksheet>
+    <worksheet name='confirmation'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='error_demographics' name='federated.0csvngc1711ko810u15sz11ldnnu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0csvngc1711ko810u15sz11ldnnu'>
+            <column caption='completion' datatype='integer' name='[Calculation_1017250586016686082]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD(IF [process_step] = &apos;confirm&apos; THEN [visit_id] END)' />
+            </column>
+            <column datatype='string' name='[gender]' role='dimension' type='nominal' />
+            <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[process_step]' derivation='None' name='[none:process_step:nk]' pivot='key' type='nominal' />
+            <column-instance column='[variation]' derivation='None' name='[none:variation:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[process_step]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1017250586016686082]' derivation='User' name='[usr:Calculation_1017250586016686082:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[variation]' role='dimension' type='nominal' />
+            <column datatype='string' name='[visit_id]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0csvngc1711ko810u15sz11ldnnu].[none:gender:nk]' filter-group='3'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:gender:nk]' member='&quot;F&quot;' />
+              <groupfilter function='member' level='[none:gender:nk]' member='&quot;M&quot;' />
+            </groupfilter>
+            <target field='[federated.0csvngc1711ko810u15sz11ldnnu].[none:gender:nk]' />
+          </filter>
+          <filter class='categorical' column='[federated.0csvngc1711ko810u15sz11ldnnu].[none:process_step:nk]' filter-group='5'>
+            <groupfilter function='level-members' level='[none:process_step:nk]' />
+            <target field='[federated.0csvngc1711ko810u15sz11ldnnu].[none:process_step:nk]' />
+          </filter>
+          <filter class='categorical' column='[federated.0csvngc1711ko810u15sz11ldnnu].[none:variation:nk]' filter-group='4'>
+            <groupfilter function='level-members' level='[none:variation:nk]' />
+            <target field='[federated.0csvngc1711ko810u15sz11ldnnu].[none:variation:nk]' />
+          </filter>
+          <slices>
+            <column>[federated.0csvngc1711ko810u15sz11ldnnu].[none:gender:nk]</column>
+            <column>[federated.0csvngc1711ko810u15sz11ldnnu].[none:variation:nk]</column>
+            <column>[federated.0csvngc1711ko810u15sz11ldnnu].[none:process_step:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0csvngc1711ko810u15sz11ldnnu].[usr:Calculation_1017250586016686082:qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.0csvngc1711ko810u15sz11ldnnu].[none:variation:nk]' value='46' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0csvngc1711ko810u15sz11ldnnu].[none:variation:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0csvngc1711ko810u15sz11ldnnu].[none:variation:nk]</rows>
+        <cols>[federated.0csvngc1711ko810u15sz11ldnnu].[usr:Calculation_1017250586016686082:qk]</cols>
+      </table>
+      <simple-id uuid='{17A4CA3D-51C5-4E5C-885A-E2C20FC8114A}' />
+    </worksheet>
+    <worksheet name='duration'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='duration_demographics' name='federated.0mjfr131h7jk0l1b2iyry0oc82ow' />
+            <datasource caption='error_demographics' name='federated.0csvngc1711ko810u15sz11ldnnu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0csvngc1711ko810u15sz11ldnnu'>
+            <column datatype='string' name='[gender]' role='dimension' type='nominal' />
+            <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[process_step]' derivation='None' name='[none:process_step:nk]' pivot='key' type='nominal' />
+            <column-instance column='[variation]' derivation='None' name='[none:variation:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[process_step]' role='dimension' type='nominal' />
+            <column datatype='string' name='[variation]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0mjfr131h7jk0l1b2iyry0oc82ow'>
+            <column-instance column='[duration]' derivation='Avg' name='[avg:duration:qk]' pivot='key' type='quantitative' />
+            <column datatype='real' datatype-customized='true' name='[duration]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[gender]' role='dimension' type='nominal' />
+            <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[process_step]' derivation='None' name='[none:process_step:nk]' pivot='key' type='nominal' />
+            <column-instance column='[variation]' derivation='None' name='[none:variation:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[process_step]' role='dimension' type='nominal' />
+            <column datatype='string' name='[variation]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0csvngc1711ko810u15sz11ldnnu].[none:gender:nk]' filter-group='3'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:gender:nk]' member='&quot;F&quot;' />
+              <groupfilter function='member' level='[none:gender:nk]' member='&quot;M&quot;' />
+            </groupfilter>
+            <target field='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:gender:nk]' />
+          </filter>
+          <filter class='categorical' column='[federated.0csvngc1711ko810u15sz11ldnnu].[none:process_step:nk]' filter-group='5'>
+            <groupfilter function='level-members' level='[none:process_step:nk]' />
+            <target field='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:process_step:nk]' />
+          </filter>
+          <filter class='categorical' column='[federated.0csvngc1711ko810u15sz11ldnnu].[none:variation:nk]' filter-group='4'>
+            <groupfilter function='level-members' level='[none:variation:nk]' />
+            <target field='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:variation:nk]' />
+          </filter>
+          <filter class='categorical' column='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:process_step:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:process_step:nk]' />
+              <groupfilter function='member' level='[none:process_step:nk]' member='&quot;confirm&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:process_step:nk]</column>
+            <column>[federated.0csvngc1711ko810u15sz11ldnnu].[none:gender:nk]</column>
+            <column>[federated.0csvngc1711ko810u15sz11ldnnu].[none:variation:nk]</column>
+            <column>[federated.0csvngc1711ko810u15sz11ldnnu].[none:process_step:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[avg:duration:qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:process_step:nk]' value='59' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:variation:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:process_step:nk]</rows>
+        <cols>[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[avg:duration:qk]</cols>
+      </table>
+      <simple-id uuid='{CD85838E-8FB3-4F61-8A79-E41B2BE4423B}' />
+    </worksheet>
+    <worksheet name='error'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>error count</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='error_demographics' name='federated.0csvngc1711ko810u15sz11ldnnu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0csvngc1711ko810u15sz11ldnnu'>
+            <column caption='error_count' datatype='integer' name='[Calculation_1017250586016313345]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD(IF [step_validation] = &apos;error&apos; THEN [visit_id] END)' />
+            </column>
+            <column datatype='string' name='[gender]' role='dimension' type='nominal' />
+            <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[process_step]' derivation='None' name='[none:process_step:nk]' pivot='key' type='nominal' />
+            <column-instance column='[variation]' derivation='None' name='[none:variation:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[process_step]' role='dimension' type='nominal' />
+            <column datatype='string' name='[step_validation]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1017250586016313345]' derivation='User' name='[usr:Calculation_1017250586016313345:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[variation]' role='dimension' type='nominal' />
+            <column datatype='string' name='[visit_id]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0csvngc1711ko810u15sz11ldnnu].[none:gender:nk]' filter-group='3'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:gender:nk]' member='&quot;F&quot;' />
+              <groupfilter function='member' level='[none:gender:nk]' member='&quot;M&quot;' />
+            </groupfilter>
+            <target field='[federated.0csvngc1711ko810u15sz11ldnnu].[none:gender:nk]' />
+          </filter>
+          <filter class='categorical' column='[federated.0csvngc1711ko810u15sz11ldnnu].[none:process_step:nk]' filter-group='5'>
+            <groupfilter function='level-members' level='[none:process_step:nk]' />
+            <target field='[federated.0csvngc1711ko810u15sz11ldnnu].[none:process_step:nk]' />
+          </filter>
+          <filter class='categorical' column='[federated.0csvngc1711ko810u15sz11ldnnu].[none:variation:nk]' filter-group='4'>
+            <groupfilter function='level-members' level='[none:variation:nk]' />
+            <target field='[federated.0csvngc1711ko810u15sz11ldnnu].[none:variation:nk]' />
+          </filter>
+          <slices>
+            <column>[federated.0csvngc1711ko810u15sz11ldnnu].[none:gender:nk]</column>
+            <column>[federated.0csvngc1711ko810u15sz11ldnnu].[none:variation:nk]</column>
+            <column>[federated.0csvngc1711ko810u15sz11ldnnu].[none:process_step:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='999' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0csvngc1711ko810u15sz11ldnnu].[usr:Calculation_1017250586016313345:qk]' max='2659' min='37' num-steps='5' reverse='true' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-diverging'>
+                <color>#aa55ff</color>
+                <color>#af63fb</color>
+                <color>#b470f8</color>
+                <color>#b97ef4</color>
+                <color>#be8af1</color>
+                <color>#c297ed</color>
+                <color>#c6a3ea</color>
+                <color>#caaee6</color>
+                <color>#cebae3</color>
+                <color>#d2c4df</color>
+                <color>#d5cfdc</color>
+                <color>#d9d9d9</color>
+                <color>#c8d5dc</color>
+                <color>#b7d2df</color>
+                <color>#a5cee3</color>
+                <color>#92cae6</color>
+                <color>#7fc6ea</color>
+                <color>#6cc2ed</color>
+                <color>#57bef1</color>
+                <color>#42b9f4</color>
+                <color>#2db4f8</color>
+                <color>#16affb</color>
+                <color>#00aaff</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.0csvngc1711ko810u15sz11ldnnu].[usr:Calculation_1017250586016313345:qk]' value=''>
+              <formatted-text />
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.0csvngc1711ko810u15sz11ldnnu].[usr:Calculation_1017250586016313345:qk]' />
+              <color column='[federated.0csvngc1711ko810u15sz11ldnnu].[usr:Calculation_1017250586016313345:qk]' />
+              <text column='[federated.0csvngc1711ko810u15sz11ldnnu].[none:variation:nk]' />
+              <text column='[federated.0csvngc1711ko810u15sz11ldnnu].[none:process_step:nk]' />
+              <text column='[federated.0csvngc1711ko810u15sz11ldnnu].[usr:Calculation_1017250586016313345:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{D26EDE1F-3BE3-4328-9357-33AE54545984}' />
+    </worksheet>
+    <worksheet name='gen_dist'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>client generation&#10;</run>
+            <run fontsize='9'>(click to filter)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='duration_demographics' name='federated.0mjfr131h7jk0l1b2iyry0oc82ow' />
+            <datasource caption='error_demographics' name='federated.0csvngc1711ko810u15sz11ldnnu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0csvngc1711ko810u15sz11ldnnu'>
+            <column datatype='string' name='[gender]' role='dimension' type='nominal' />
+            <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[process_step]' derivation='None' name='[none:process_step:nk]' pivot='key' type='nominal' />
+            <column-instance column='[variation]' derivation='None' name='[none:variation:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[process_step]' role='dimension' type='nominal' />
+            <column datatype='string' name='[variation]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0mjfr131h7jk0l1b2iyry0oc82ow'>
+            <column caption='female_client' datatype='integer' name='[Calculation_1017250586017767427]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD(IF [gender] = &apos;F&apos; THEN [client_id] END)' />
+            </column>
+            <column caption='male_client' datatype='integer' name='[Calculation_1017250586017808388]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD(IF [gender] = &apos;M&apos; THEN [client_id] END)' />
+            </column>
+            <column datatype='integer' name='[client_id]' role='measure' type='quantitative' />
+            <column datatype='string' name='[gender]' role='dimension' type='nominal' />
+            <column datatype='string' name='[generation]' role='dimension' type='nominal' />
+            <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[generation]' derivation='None' name='[none:generation:nk]' pivot='key' type='nominal' />
+            <column-instance column='[process_step]' derivation='None' name='[none:process_step:nk]' pivot='key' type='nominal' />
+            <column-instance column='[variation]' derivation='None' name='[none:variation:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[process_step]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1017250586017767427]' derivation='User' name='[usr:Calculation_1017250586017767427:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1017250586017808388]' derivation='User' name='[usr:Calculation_1017250586017808388:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[variation]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0csvngc1711ko810u15sz11ldnnu].[none:gender:nk]' filter-group='3'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:gender:nk]' member='&quot;F&quot;' />
+              <groupfilter function='member' level='[none:gender:nk]' member='&quot;M&quot;' />
+            </groupfilter>
+            <target field='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:gender:nk]' />
+          </filter>
+          <filter class='categorical' column='[federated.0csvngc1711ko810u15sz11ldnnu].[none:process_step:nk]' filter-group='5'>
+            <groupfilter function='level-members' level='[none:process_step:nk]' />
+            <target field='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:process_step:nk]' />
+          </filter>
+          <filter class='categorical' column='[federated.0csvngc1711ko810u15sz11ldnnu].[none:variation:nk]' filter-group='4'>
+            <groupfilter function='level-members' level='[none:variation:nk]' />
+            <target field='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:variation:nk]' />
+          </filter>
+          <filter class='categorical' column='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[usr:Calculation_1017250586017767427:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[usr:Calculation_1017250586017808388:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:generation:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:generation:nk]' />
+              <groupfilter function='member' level='[none:generation:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:generation:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;silent generation&quot;</bucket>
+              <bucket>&quot;baby boomers&quot;</bucket>
+              <bucket>&quot;generation x&quot;</bucket>
+              <bucket>&quot;generation z&quot;</bucket>
+              <bucket>&quot;millenial&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[:Measure Names]</column>
+            <column>[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:generation:nk]</column>
+            <column>[federated.0csvngc1711ko810u15sz11ldnnu].[none:gender:nk]</column>
+            <column>[federated.0csvngc1711ko810u15sz11ldnnu].[none:variation:nk]</column>
+            <column>[federated.0csvngc1711ko810u15sz11ldnnu].[none:process_step:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='tick-color' scope='cols' value='#00000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' scope='cols' value='0' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[:Measure Names]' value='false' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' scope='cols' value='0' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:gender:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[Multiple Values]</rows>
+        <cols>([federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:generation:nk] / [federated.0mjfr131h7jk0l1b2iyry0oc82ow].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{0E570273-F6D2-4EF6-BA8E-7C90D7BD6B62}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='900' maxwidth='1600' minheight='900' minwidth='1600' preset-index='8' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='error_demographics' name='federated.0csvngc1711ko810u15sz11ldnnu' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0csvngc1711ko810u15sz11ldnnu'>
+        <column datatype='string' name='[gender]' role='dimension' type='nominal' />
+        <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+        <column-instance column='[process_step]' derivation='None' name='[none:process_step:nk]' pivot='key' type='nominal' />
+        <column-instance column='[variation]' derivation='None' name='[none:variation:nk]' pivot='key' type='nominal' />
+        <column datatype='string' name='[process_step]' role='dimension' type='nominal' />
+        <column datatype='string' name='[variation]' role='dimension' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='91333' id='13' param='horz' type-v2='layout-flow' w='92437' x='7063' y='7778'>
+            <zone h='91333' id='7' param='horz' type-v2='layout-flow' w='92437' x='7063' y='7778'>
+              <zone fixed-size='575' h='91333' id='18' is-fixed='true' type-v2='layout-basic' w='35938' x='7063' y='7778'>
+                <zone h='36471' id='3' param='vert' type-v2='layout-flow' w='35938' x='7063' y='7778'>
+                  <zone h='36471' id='5' name='gen_dist' w='35938' x='7063' y='7778'>
+                    <layout-cache cell-count-w='10' minheight='201' non-cell-size-w='53' type-h='scalable' type-w='cell' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+                <zone h='54862' id='19' param='vert' type-v2='layout-flow' w='35938' x='7063' y='44249'>
+                  <zone h='52889' id='9' name='age_dist' show-title='false' w='35938' x='7063' y='44249'>
+                    <layout-cache fixed-size-h='468' minwidth='202' type-h='fixed' type-w='scalable' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+              <zone h='91333' id='10' param='vert' type-v2='layout-flow' w='56499' x='43001' y='7778'>
+                <zone h='33333' id='11' name='error' w='56499' x='43001' y='7778'>
+                  <layout-cache cell-count-w='1' fixed-size-h='292' type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='189' h='21889' id='15' is-fixed='true' name='confirmation' w='56499' x='43001' y='41111'>
+                  <layout-cache minwidth='180' type-h='fixed' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='317' h='36111' id='17' is-fixed='true' name='duration' w='56499' x='43001' y='63000'>
+                  <layout-cache minwidth='180' type-h='fixed' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='91333' id='20' param='vert' type-v2='layout-flow' w='6563' x='500' y='7778'>
+            <zone h='2778' id='26' type-v2='text' w='6563' x='500' y='7778'>
+              <formatted-text>
+                <run>Filtros</run>
+              </formatted-text>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='5778' id='23' mode='checkdropdown' name='error' param='[federated.0csvngc1711ko810u15sz11ldnnu].[none:gender:nk]' type-v2='filter' values='database' w='6563' x='500' y='10556'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='5778' id='24' mode='checkdropdown' name='error' param='[federated.0csvngc1711ko810u15sz11ldnnu].[none:variation:nk]' type-v2='filter' values='database' w='6563' x='500' y='16334'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='5778' id='25' mode='checkdropdown' name='error' param='[federated.0csvngc1711ko810u15sz11ldnnu].[none:process_step:nk]' type-v2='filter' values='database' w='6563' x='500' y='22112'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone h='6889' id='21' param='horz' type-v2='layout-flow' w='99000' x='500' y='889'>
+            <zone h='6889' id='22' is-scaled='1' param='C:/Users/Santi/Downloads/Vanguard.png' type-v2='bitmap' w='99000' x='500' y='889'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='8444' id='27' name='error' pane-specification-id='0' param='[federated.0csvngc1711ko810u15sz11ldnnu].[usr:Calculation_1017250586016313345:qk]' type-v2='color' w='8750' x='91250' y='7222' />
+        <zone h='6444' id='28' name='gen_dist' pane-specification-id='0' param='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:gender:nk]' type-v2='color' w='8750' x='33750' y='7333' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1800' minheight='1800' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='32' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98222' id='31' param='vert' type-v2='layout-flow' w='99000' x='500' y='889'>
+                <zone fixed-size='54' h='6889' id='22' is-fixed='true' is-scaled='1' param='C:/Users/Santi/Downloads/Vanguard.png' type-v2='bitmap' w='99000' x='500' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='2778' id='26' type-v2='text' w='6563' x='500' y='7778'>
+                  <formatted-text>
+                    <run>Filtros</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='36471' id='5' is-fixed='true' name='gen_dist' w='35938' x='7063' y='7778'>
+                  <layout-cache cell-count-w='10' minheight='201' non-cell-size-w='53' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6444' id='28' name='gen_dist' pane-specification-id='0' param='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:gender:nk]' type-v2='color' w='8750' x='33750' y='7333'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5778' id='23' mode='checkdropdown' name='error' param='[federated.0csvngc1711ko810u15sz11ldnnu].[none:gender:nk]' type-v2='filter' values='database' w='6563' x='500' y='10556'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5778' id='24' mode='checkdropdown' name='error' param='[federated.0csvngc1711ko810u15sz11ldnnu].[none:variation:nk]' type-v2='filter' values='database' w='6563' x='500' y='16334'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5778' id='25' mode='checkdropdown' name='error' param='[federated.0csvngc1711ko810u15sz11ldnnu].[none:process_step:nk]' type-v2='filter' values='database' w='6563' x='500' y='22112'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='33333' id='11' is-fixed='true' name='error' w='56499' x='43001' y='7778'>
+                  <layout-cache cell-count-w='1' fixed-size-h='292' type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8444' id='27' name='error' pane-specification-id='0' param='[federated.0csvngc1711ko810u15sz11ldnnu].[usr:Calculation_1017250586016313345:qk]' type-v2='color' w='8750' x='91250' y='7222'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='189' h='21889' id='15' is-fixed='true' name='confirmation' w='56499' x='43001' y='41111'>
+                  <layout-cache minwidth='180' type-h='fixed' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='52889' id='9' is-fixed='true' name='age_dist' show-title='false' w='35938' x='7063' y='44249'>
+                  <layout-cache fixed-size-h='468' minwidth='202' type-h='fixed' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='36111' id='17' is-fixed='true' name='duration' w='56499' x='43001' y='63000'>
+                  <layout-cache minwidth='180' type-h='fixed' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{86F2EDBA-614B-4C35-89C0-E77A672EDB00}' />
+    </dashboard>
+  </dashboards>
+  <windows show-side-pane='false' source-height='51'>
+    <window class='worksheet' name='error'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='175'>
+            <card pane-specification-id='0' param='[federated.0csvngc1711ko810u15sz11ldnnu].[usr:Calculation_1017250586016313345:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0csvngc1711ko810u15sz11ldnnu].[none:gender:nk]</field>
+            <field>[federated.0csvngc1711ko810u15sz11ldnnu].[none:process_step:nk]</field>
+            <field>[federated.0csvngc1711ko810u15sz11ldnnu].[none:variation:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{E46F1C09-D695-486A-9959-0966F70E4B08}' />
+    </window>
+    <window class='worksheet' name='confirmation'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='175'>
+            <card pane-specification-id='0' param='[federated.0csvngc1711ko810u15sz11ldnnu].[none:variation:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0csvngc1711ko810u15sz11ldnnu].[none:variation:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{C2A2D93B-AA11-4C1C-BD00-2609994AA2CA}' />
+    </window>
+    <window class='worksheet' name='duration'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='175'>
+            <card pane-specification-id='0' param='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:variation:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:duration:ok]</field>
+            <field>[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:process_step:nk]</field>
+            <field>[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:variation:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{2261C7BB-AB57-4327-A8D3-E144E99B868C}' />
+    </window>
+    <window class='worksheet' maximized='true' name='age_dist'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='175'>
+            <card pane-specification-id='2' param='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[:Measure Names]' type='color' />
+            <card pane-specification-id='1' param='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:gender:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:age (agrupación):ok]</field>
+            <field>[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:gender:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{5E377607-DE00-4B84-8B31-0CF952C530F8}' />
+    </window>
+    <window class='worksheet' name='gen_dist'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='175'>
+            <card pane-specification-id='0' param='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:gender:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:gender:nk]</field>
+            <field>[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:generation:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{35E069D1-5C7A-491E-BCDF-B55788FBAFD3}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='age_dist' />
+        <viewpoint name='confirmation'>
+          <highlight>
+            <color-one-way>
+              <field>[federated.0csvngc1711ko810u15sz11ldnnu].[none:variation:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name='duration'>
+          <highlight>
+            <color-one-way>
+              <field>[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:variation:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name='error'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='gen_dist'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[:Measure Names]'>
+            <color-one-way>
+              <field>[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[:Measure Names]</field>
+              <field>[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[none:gender:nk]</field>
+            </color-one-way>
+            <bucket-selection>
+              <bucket>&quot;[federated.0mjfr131h7jk0l1b2iyry0oc82ow].[usr:Calculation_1017250586017767427:qk]&quot;</bucket>
+            </bucket-selection>
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{908C1A68-8AD6-4E28-B8D5-81516DA45BFF}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+      /wHFl31yBU7TEAAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='age_dist' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAFD0lEQVR4nO3dXU8cZRyG8XtZqKxJgShNRXypNSho0jZV0aRGE5t40ANP/Ah+LY9MjDHp
+      UZv4clCxRUmaaNW0NK0JbaBSpAvswrA7C7s74xdg0SXrzOzc1++c2f/Jtc8zz0OgEMdxLMDU
+      QNoDAGkiAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgj
+      AFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgb
+      THsA4L/47aG0XO79cwkAfWG3IW0EvX8uWyBYIwBYIwBYIwBYIwBYIwBYK8RxHKc9BPBvyjtS
+      EPb+uQQAa1yE9alwX9r5H74R3RBAn1opS/P30p6i//ESDGsEAGsEAGsEAGsEAGsEAGscg/ap
+      YlEaHkp7iv7HTTCssQWCNbZABla3pD8fpz1FNhGAgZ26tLSe9hTZxBYI1ggA1ggA1ggA1ggA
+      1ggA1rgJNlDekR5tpj1FNhEArHERlnNRJDXbaU+RXQSQc+VAuvpL2lNkFy/BsEYAsEYAsEYA
+      sEYAsEYAsEYAsMZNcM5xEXY4AoA1boJTVmtI99fSnsIXAaSstifdepD2FL54CYY1AoA1AoA1
+      AoA1AoA1AoA1jkFTNjwkvXoy7Sl8cRMMa2yBYC2TW6Av5yXWJSQhkwGE+2lPABeZDADoJKo9
+      1g/ff6XSyGmdOX9Wt376RkOjU5r94GMNFgpdP493APSVvfquSsfHdWpmVpW1VZ376DNNjBcV
+      hq0jPY8A0FeOjU1qanpW2w/nVA5aiuJIcRSpoO6//SUCQJ9p1p/oweKCKo2Spt+Y0uL1L7RV
+      K6lUOtpuPpP3AJ9fS3sCuGAFgLVMrgBPtqXMDYVcymQAQFISvweo70lzi0l/KnCwxANoR9Ja
+      JelPBQ7GTTAyLao90vVrV1QaeUXn33pNc99+p7EXZvTOexc10IMjHAJApoXVqp57/YJOvTyt
+      9t839Pzbn2pq8hkVenR+yTEoMu3Y2Am1Npb0+/xl1Z+eUnN1QTdvXFG7HfXk+QSATNurVxRs
+      b6kZFbVfr6oebEqFQekIv/h2kMSPQYNQ+nohyU8EOmMFgLXEV4BmS1paT/ITgc64CYa1XB2D
+      BqHU4p9BoAu5CuDHu9J6Ne0p0E94CUaOxKpX11TZ2lQcR9ouLyts7B36E7laAeCtsXFff9y+
+      rRMTM1L1ru6tVqT2Hb374SUNdLg3YAVAbmyWV9TarSqo7Whtc1+z73+i0dFjiqLO5zwEgNx4
+      anhEL527pJGBde0H29oIdtUMGyoccmtMAMiNZ188o3D1ZwXxhN68cFF/3byskcmzHbc/Us7u
+      Aa7+yikQupOrl+BiQSqypqELuVoBgG7xfQlrudoC5cWdFalaT3sKDwSQQcsb/OGApLAFgjUC
+      gDUCgDUCgDUCgDUCgDWOQTPo9Elp/HjaU3jgVyFgjS0QrBEArBEArBEArBEArBEArBEArBEA
+      rBEArBEArBEArBEArBEArBEArBEArBEArBEArBEArBEArBEArBEArBEArBEArBEArBEArBEA
+      rBEArBEArBEArBEArBEArBEArBEArBEArBEArBEArBEArBEArBEArBEArBEArBEArBEArBEA
+      rBEArBEArBEArBEArBEArBEArBEArBEArBEArBEArBEArBEArBEArBEArBEArBEArBEArBEA
+      rP0DlFU4mLehvqcAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='146' name='confirmation' width='192'>
+      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
+      p60AAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='duration' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='error' width='192'>
+      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
+      v8c4t/4XWq8xoRFJg6AAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='gen_dist' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
